@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Chips</title>
+    <style>
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #f1f1f1;
+        }
+
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -30px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .closebtn {
+            padding-left: 10px;
+            color: #888;
+            font-weight: bold;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .closebtn:hover {
+            color: #000;
+        }
+    </style>
+    <style>
+        .flip-card {
+            background-color: rgb(176, 235, 235);
+            width: 200px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="chip">
+        <img src="avatar.jpg" alt="Person" width="96" height="96">
+        Mr saurabh
+    </div>
+    <div class="chip">
+        <img src="avatar.jpg" alt="Person" width="96" height="96">
+        Mr sam
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+    </div>
+
+   
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="avatar.jpg" alt="mr sam" style="width: 200px;height: 200px;;">
+            </div>
+            <div class="flip-card-back">
+                <h1>MR SAURABH</h1>
+                <p>HTML class student</p>
+                <p> progress in css </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
